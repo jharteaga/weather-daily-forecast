@@ -1,3 +1,38 @@
+const descriptions = [
+  {
+    description: 'overcast clouds',
+    image: 'img/cloudy.svg'
+  },
+  {
+    description: 'few clouds',
+    image: 'img/partialSunny.svg'
+  },
+  {
+    description: 'mist',
+    image: 'img/cloudy.svg'
+  },
+  {
+    description: 'moderate rain',
+    image: 'img/rainy.svg'
+  },
+  {
+    description: 'light rain',
+    image: 'img/rainy.svg'
+  },
+  {
+    description: 'broken clouds',
+    image: 'img/partialSunny.svg'
+  },
+  {
+    description: 'clear sky',
+    image: 'img/sunny.svg'
+  },
+  {
+    description: 'scattered clouds',
+    image: 'img/cloudy.svg'
+  }
+];
+
 //Controls
 const searchBtn = document.querySelector('.fa-search');
 const city = document.getElementById('city');
@@ -6,6 +41,7 @@ const updateBtn = document.getElementById('update');
 const metricC = document.getElementById('celsious');
 const metricF = document.getElementById('farenheit');
 const cityForm = document.querySelector('.cities');
+const weatherImg = document.getElementById('weather-img');
 let tempMetric = 'metric';
 
 //Information
@@ -25,13 +61,18 @@ function getForecast() {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       tempNumber.textContent = Number(data.main.temp).toFixed(1);
-      tempDesc.textContent = data.weather[0].description;
+      tempDesc.textContent = data.weather[0].description.trim();
       infoDescArr[0].textContent = data.wind.speed + ' km/h';
       infoDescArr[1].textContent = data.main.humidity + '%';
       infoDescArr[2].textContent = data.main.feels_like;
-    });
+
+      descriptions.forEach((item, i) => {
+        if (item.description.trim() === tempDesc.textContent)
+          weatherImg.setAttribute('src', item.image);
+      });
+    })
+    .catch((err) => console.error('Error to get API information'));
 }
 
 cityForm.addEventListener('submit', (e) => {
@@ -40,6 +81,10 @@ cityForm.addEventListener('submit', (e) => {
 });
 
 searchBtn.addEventListener('click', () => {
+  getForecast();
+});
+
+updateBtn.addEventListener('click', () => {
   getForecast();
 });
 
