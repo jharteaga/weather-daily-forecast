@@ -66,6 +66,7 @@ body {
 .weather-img {
   width: 160px;
   height: 100%;
+  margin-right: 0.7em;
 }
 
 .temperature-container p {
