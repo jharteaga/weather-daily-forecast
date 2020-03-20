@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+      integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather Widget</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <form class="cities" method="get">
+        <i class="fas fa-search"></i>
+        <input type="text" id="city" placeholder="Enter US city..." />
+        <button class="update" id="update"><i class="fas fa-sync"></i></button>
+      </form>
+      <div class="weather-container">
+        <img
+          src="img/sunny.svg"
+          alt="Weather image"
+          class="weather-img"
+          id="weather-img"
+        />
+        <div class="temperature-container">
+          <p class="tempNumber">20 grados</p>
+          <p class="tempDesc">Description</p>
+        </div>
+        <div class="metrics-container">
+          <p class="celsious">C</p>
+          <p class="farenheit">F</p>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="info">
+          <i class="fas fa-wind info-img"></i>
+          <p class="info-desc"></p>
+        </div>
+        <div class="info">
+          <i class="fas fa-tint info-img"></i>
+          <p class="info-desc"></p>
+        </div>
+        <div class="info">
+          <i class="fas fa-cloud-showers-heavy"></i>
+          <p class="info-desc"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
