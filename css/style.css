@@ -6,12 +6,103 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(161, 173, 207);
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 500px;
   max-width: 600px;
-  margin: 0 auto;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.cities {
+  justify-self: flex-start;
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+.cities i {
+  font-size: 1.3rem;
+}
+
+.fa-search {
+  cursor: pointer;
+}
+
+#city {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding-left: 0.5em;
+  color: rgb(116, 113, 113);
+}
+
+.update {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.weather-container {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.weather-img {
+  width: 160px;
+  height: 100%;
+}
+
+.temperature-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.tempNumber {
+  font-size: 3.8rem;
+}
+
+.tempDesc {
+  font-size: 1.2rem;
+}
+
+.metrics-container {
+  display: flex;
+  align-self: flex-start;
+}
+
+.metrics-container p {
+  font-size: 1rem;
+  color: rgb(194, 194, 192);
+  font-weight: 700;
+  margin: 0 0.3em;
+  cursor: pointer;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.info-img {
+  font-size: 1.5rem;
+}
+
+.info-desc {
+  font-size: 1.1rem;
 }
