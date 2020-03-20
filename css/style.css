@@ -28,7 +28,7 @@ body {
 .cities {
   justify-self: flex-start;
   width: 80%;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .cities i {
@@ -52,6 +52,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin-left: 1.6em;
 }
 
 .weather-container {
@@ -59,7 +60,7 @@ body {
   width: 80%;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .weather-img {
@@ -74,6 +75,7 @@ body {
 
 .tempNumber {
   font-size: 3.8rem;
+  font-weight: 700;
 }
 
 .tempDesc {
@@ -88,9 +90,14 @@ body {
 .metrics-container p {
   font-size: 1rem;
   color: rgb(194, 194, 192);
-  font-weight: 700;
-  margin: 0 0.3em;
+  margin: 0 0.5em;
   cursor: pointer;
+}
+
+p.selected {
+  font-weight: 700;
+  transform: scale(1.6);
+  color: black;
 }
 
 .info-container {

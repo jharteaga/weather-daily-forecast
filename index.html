@@ -15,13 +15,13 @@
   <body>
     <div class="main-container">
       <form class="cities" method="get">
-        <i class="fas fa-search"></i>
         <input
           type="text"
           id="city"
           placeholder="New York City"
           value="New York"
         />
+        <i class="fas fa-search"></i>
         <button class="update" id="update"><i class="fas fa-sync"></i></button>
       </form>
       <div class="weather-container">
@@ -33,11 +33,11 @@
         />
         <div class="temperature-container">
           <p class="tempNumber">20°</p>
-          <p class="tempDesc">Description</p>
+          <p class="tempDesc">Clear Sky</p>
         </div>
         <div class="metrics-container">
-          <p class="celsious">C</p>
-          <p class="farenheit">F</p>
+          <p class="selected">C</p>
+          <p>F</p>
         </div>
       </div>
       <div class="info-container">
@@ -50,11 +50,12 @@
           <p class="info-desc">70%</p>
         </div>
         <div class="info">
-          <i class="fas fa-cloud-showers-heavy info-img"></i>
+          <i class="fas fa-temperature-low info-img"></i>
           <p class="info-desc">20%</p>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
